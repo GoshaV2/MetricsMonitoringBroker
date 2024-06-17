@@ -1,0 +1,18 @@
+pluginManagement {
+    repositories {
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+}
+
+
+rootProject.name = 'KafkaMonitoring'
+
+include 'metricsconsumer'
+include 'metricsproducer'
+include 'common'

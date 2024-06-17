@@ -1,0 +1,10 @@
+broker:
+  metric:
+    topic: v1.metric.topic
+    partitions: 1
+    replication: 1
+spring:
+  kafka:
+    bootstrap-servers: ${KAFKA_HOST}:${KAFKA_PORT}
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer

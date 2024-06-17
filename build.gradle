@@ -1,0 +1,24 @@
+plugins {
+    id('org.springframework.boot') version '3.3.0' apply false
+}
+
+group = 'com.t1'
+version = '0.0.1-SNAPSHOT'
+
+allprojects {
+    apply {
+        plugin("java")
+    }
+    dependencies {
+        annotationProcessor(platform("org.springframework.boot:spring-boot-dependencies:3.3.0"))
+        annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+        implementation(platform("org.springframework.boot:spring-boot-dependencies:3.3.0"))
+        annotationProcessor 'org.projectlombok:lombok:1.18.26'
+        annotationProcessor 'org.projectlombok:lombok'
+        compileOnly 'org.projectlombok:lombok:1.18.26'
+    }
+
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+
+}
